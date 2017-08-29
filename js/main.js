@@ -90,3 +90,12 @@ $(function() {
 });
 
 
+// Выравнивание высоты
+if($(document).width() > 992) {
+	$(function() {
+		var aside = $("aside");
+		var container = $(".bg_container");
+		var height = aside.height();
+		container.css({'min-height' : height });
+	});
+}

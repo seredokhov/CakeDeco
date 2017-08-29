@@ -75,7 +75,6 @@ h1 {
 	line-height: 38px;
 	color: #555555;
 	font-family: 'Proxima Nova Bold';
-	text-transform: uppercase;
 	margin-top: 30px;
 	margin-bottom: 24px;
 	padding-left: 13px;
@@ -367,6 +366,10 @@ main {
 	padding-top: 25px;
 	overflow: hidden;
 	padding-bottom: 50px;
+}
+main > .container > .row {
+	/*display: flex;
+	flex-wrap: wrap;*/
 }
 .catalog {
 	background: #ffffff;
@@ -718,6 +721,7 @@ main {
 	padding: 0;
 	list-style: none;
 	overflow: hidden;
+	margin-bottom: 15px;
 }
 .bread_crumbs li {
 	float: left;
@@ -738,8 +742,315 @@ main {
 .bread_crumbs + h1 {
 	margin-top: 15px;
 }
+.about p {
+	color: #828282;
+	font-size: 12px;
+	line-height: 21px;
+	font-family: 'Proxima Nova Light';
+	margin-bottom: 20px;
+}
+.first_person {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 55px;
+	overflow: hidden;
+}
+.first_person > div {
+	margin: 0 auto;
+}
+.first_person .img_block {
+	max-width: 270px;
+	float: left;
+	padding: 5px;
+	border: 1px solid #dddddd;
+}
+.first_person  .person_descr {
+	float: left;
+	max-width: 570px;
+	padding: 0px 15px 0px 30px;
+}
+.first_person p {
+	color: #898989;
+	font-size: 18px;
+}
+.first_person > div:last-child {
+	position: relative;
+}
+.first_person .person_info {
+	position: absolute;
+	bottom: 0;
+	left: 15px;
+}
+.first_person .person_info .name {
+	font-size: 20px;
+	color: #4b4b4b;
+	font-family: 'Proxima Nova Bold';
+}
+.first_person .person_info .position {
+	font-size: 16px;
+	color: #898989;
+}
+.first_person .person_info .position:before {
+	content: '/';
+	font-family: 'Proxima Nova Light';
+	color: #898989;
+	font-size: 16px;
+	margin-left: 3px;
+	margin-right: 5px;
+}
+.team {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background: #ffffff;
+	margin-right: -15px;
+	margin-left: -15px;
+	overflow: hidden;
+}
+.team .person {
+	max-width: 200px;
+	margin: 0 15px;
+}
+.team .person .position {
+	display: flex;
+	align-items: center;
+	color: #4b4b4b;
+	font-family: 'Proxima Nova Bold';
+	font-size: 14px;
+	text-transform: uppercase;
+	border-left: 4px solid #fe5f71;
+	padding-left: 10px;
+	min-height: 42px;
+	margin: 2px 0;
+}
+.team .person .name {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	font-family: 'Proxima Nova Bold';
+	justify-content: center;
+	text-align: center;
+	margin: 14px 0;
+}
 
 
+
+
+
+
+/*  Копипаста */
+.tovar_tabs .nav-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+}
+.tab-pane p {
+	font-family: 'Proxima Nova Light';
+	font-size: 14px;
+	color: #979797;
+}
+.nav-tabs > li {
+	margin-left:2.5px;
+	margin-right: 2.5px;
+}
+.nav-tabs > li.active {
+	margin-right: 0;
+	margin-left: 0;
+}
+.nav-tabs > li > a {
+	border-radius: 0 !important;
+	background: #dddddd;
+	margin-right: 0;
+	padding: 5px 25px;
+	color: #555555;
+	text-decoration: underline;
+}
+.nav-tabs > li.active > a {
+	padding: 10px 25px;
+	color: #555555;
+	text-decoration: underline;
+}
+.tab-content {
+	border: 1px solid #dddddd;
+	border-top: none;
+	background: #fff;
+	min-height: 500px;
+}
+
+.tab-content > .tab-pane {
+	padding: 30px 25px 15px;
+}
+.tab-content > .tab-pane.char {
+	padding: 0;
+}
+.tab-pane header {
+	margin-bottom: 10px;
+	font-size: 15px;
+	color: #555555;
+	font-family: 'Proxima Nova Bold';
+}
+.table > div {
+	padding: 10px 0;
+	color: #555555;
+	font-size: 13px;
+	font-family: 'Proxima Nova Light';
+}
+.table > div:nth-child(2n) {
+	background: #efefef;
+}
+.tab-pane .order_table {
+	width: 100%;
+	padding: 0;
+}
+.doc {
+	font-family: 'Proxima Nova Light';
+	font-size: 13px;
+	color: #555555;
+}
+a.load_link {
+	background: #ffaa83;
+	color: #ffffff;
+	display: block;
+	font-size: 12px;
+	text-transform: uppercase;
+	height: 38px;
+	line-height: 38px;
+	width: 100px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 4px;
+	border: 1px solid #ef9469;
+	margin: 10px 0;
+}
+a.load_link:hover {
+	color: #eeeeee;
+	background: #ee8d60;
+}
+.order_table > .fieldset {
+	display: flex;
+	justify-content: space-between;
+}
+.small {
+	width: 31%;
+}
+.half {
+	width: 48% !important;
+}
+.order_table input[type="text"],
+.order_table input[type="email"],
+.order_table select, .order_table textarea{
+	border: 1px solid #dddddd;
+	margin: 10px 0;
+	outline: 0;
+	height: 35px;
+	padding: 0 10px;
+	color: #8e8e8e;
+	font-size: 14px;
+	background: #f8f8f8;
+}
+.order_table textarea {
+	padding-top: 10px;
+	resize: none;
+	min-height: 90px;
+}
+.form {
+	width: 100%;
+}
+.small input {
+	margin-bottom: 0 !important;
+}
+.rait {
+	margin: 5px 0;
+}
+.rait > span {
+	font-size: 15px;
+	color: #555555;
+	font-family: 'Proxima Nova Bold';
+}
+.stars_change {
+	direction: rtl;
+	text-align: left;
+	cursor: pointer;
+	display: inline-block;
+	margin-left: 5px;
+}
+.star-rating__wrap, .star-rating__ico {
+	cursor: pointer;
+	color: #c2c2c2;
+}
+.star-rating__input {
+	display: none;
+}
+.order_table label {
+	margin-bottom: 0;
+	margin-top: 10px;
+	display: block;
+}
+.stars_change label {
+	display: inline-block;
+}
+.tab-pane .order_table input[type="submit"] {
+	color: #ffffff;
+	width: 170px;
+	padding: 10px 20px;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 12px;
+	margin: 5px auto 30px;
+	display: block;
+	border: 1px solid #ee8d60;
+	outline: none;
+	border-radius: 4px;
+}
+.tab-pane .order_table input[type="submit"]:hover {
+	color: #eeeeee;
+	background: #ee8d60;
+}
+.button.orange, .orange {
+	background: #ffaa83;
+	border-color: #ee8d60;
+}
+.star-rating__ico:hover:before,
+.star-rating__ico:hover ~ .star-rating__ico:before,
+.star-rating__input:checked ~ .star-rating__ico:before {
+	color: #fe5f71;
+}
+.comment {
+	border-top: 1px solid #dddddd;
+	padding: 15px 25px;
+	margin-left: -25px;
+	margin-right: -25px;
+}
+.comment .autor_name {
+	font-size: 18px;
+	color: #555555;
+	margin-right: 20px;
+	font-family: 'Proxima Nova Bold';
+}
+.comment .comment_data {
+	font-size: 12px;
+	color: #919191;
+}
+.comment .comment_title {
+	display: block;
+	font-size: 15px;
+	color: #121313;
+	margin: 10px 0;
+}
+.comment ul {
+	list-style: none;
+	margin-left: 0;
+	color: #555555;
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+.comment p {
+	color: #555555;
+	font-size: 14px;
+	margin-bottom: 0;
+	margin-top: 5px;
+	font-family: "Proxima Nova Light";
+}
 /*============================================ 
 	Подвал
 ============================================*/
@@ -857,6 +1168,17 @@ footer p {
 	}
 	.item_block_2 {
 		justify-content: center;
+	}
+	.team {
+		justify-content: space-around;
+	}
+	.first_person  .person_descr {
+		padding: 15px 15px 20px;
+	}
+}
+@media (max-width: 768px) {
+	.first_person p {
+		margin-bottom: 35px;
 	}
 }
 @media (max-width: 500px) {
