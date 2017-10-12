@@ -2294,6 +2294,9 @@ footer p {
 	.tovar_chars {
 		padding-right: 0;
 	}
+	.header_phone {
+		margin-right: 0;
+	}
 }
 @media (max-width: 768px) {
 	.first_person p {
@@ -2415,7 +2418,18 @@ footer p {
 		margin: 5px;
 	}
 }
-@media (max-width: 340px) {
+@media (max-width: 415px) {
+	.header_phone {
+		font-size: 13px;
+	}
+	.upper_header .social_links a {
+		margin-right: 0;
+	}
+}
+@media (max-width: 415px) {
+
+}
+@media (max-width: 345px) {
 	.basket_button,
 	.hamb_button {
 		padding: 14.5px 0;
@@ -2433,6 +2447,14 @@ footer p {
 	.hamb_button a i {
 		position: relative;
 		bottom: 3px;
+	}
+	.upper_header .social_links,
+	.upper_header > .row > div {
+		width: auto;
+	}
+	.upper_header > .row > div.clearfix {
+		padding-left: 10px;
+		float: right;
 	}
 }
 @media (min-width: 551px) {
