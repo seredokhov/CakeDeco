@@ -1538,19 +1538,16 @@ a.load_link:hover {
 /*  Блок фильтров  */
 
 .filters_block {
-	margin-left: -10px;
-	margin-right: -10px; 
 	margin-bottom: 30px;
 	position: relative;
 }
 .filters_block > div {
-	margin: 0 10px;
 	float: left;
 }
 
 /*   Диапазон цен   */
 div#range_block {
-	min-width: 300px;
+	width: 30%;
 	border: 1px solid #dddddd;
 	background: #ffffff;
 	min-height: 150px;
@@ -1634,12 +1631,16 @@ div#range_block .input_group input {
 
 /*   Выпадающие списки   */
 .filters_block .select_block {
-	min-width: 350px;
+	width: 70%;
 	text-align: justify;
 	min-height: 150px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 .select_block > .select {
 	display: inline-block;
+	margin: 0 0 10px 10px;
 	border: 1px solid #dddddd;
 	outline: none;
 	height: 43px;
@@ -1650,12 +1651,6 @@ div#range_block .input_group input {
 	position: relative;
 	background: #ffffff;
 	cursor: pointer;
-}
-.select_block > .select:first-child {
-	float: left;
-}
-.select_block > .select:last-child {
-	float: right;
 }
 .select .pane {
 	padding: 10px 20px 10px 15px;
@@ -1777,7 +1772,7 @@ select {
 .filters_block .resize_controls {
 	position: absolute;
 	right: 1px;
-	bottom: -6px;
+	bottom: -25px;
 	font-size: 20px;
 	color: #8f8f8f;
 	cursor: pointer;
@@ -2272,7 +2267,7 @@ footer p {
 	}
 	div#range_block {
 		min-width: inherit;
-		width: 50%;
+		width: 100%;
 		margin: 0;
 	}
 	.filters_block .checkbox_block {
@@ -2286,7 +2281,7 @@ footer p {
 		width: 100%;
 	}
 	.filters_block .select_block .select {
-		width: 50%;
+		margin: 10px 0;
 	}
 	.tovar_card .tovar_info {
 		text-align: center;

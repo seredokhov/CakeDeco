@@ -128,22 +128,24 @@ $(function() {
 
 
 // Смещение шапки в момент скрола
-$(function() {
-	var header = $(".lower_header");
-	var offset = $(header).offset().top;
-	var main = $('main');
+if($(document).width() > 1200) {
+	$(function() {
+		var header = $(".lower_header");
+		var offset = $(header).offset().top;
+		var main = $('main');
 
-	$(window).scroll(function (){
-		var windowScroll = $(window).scrollTop();
-		if (windowScroll > offset) {
-			$(header).addClass("fix");
-			main.css('margin-top', '64px');
-		} else {
-			$(header).removeClass("fix");
-			$('main').css('margin-top', '0');
-		}
+		$(window).scroll(function (){
+			var windowScroll = $(window).scrollTop();
+			if (windowScroll > offset) {
+				$(header).addClass("fix");
+				main.css('margin-top', '64px');
+			} else {
+				$(header).removeClass("fix");
+				$('main').css('margin-top', '0');
+			}
+		});
 	});
-});
+}
 
 
 // Выравнивание высоты
