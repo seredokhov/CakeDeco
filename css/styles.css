@@ -114,22 +114,15 @@ a {
 	width: 25px;
 	height: 25px;
 	margin-right: 5px;
-	background: url('../images/social.png') no-repeat #eeeeee;
+	text-align: center;
+	line-height: 25px;	
+	text-decoration: none;
+	color: #747474;
+	background-color: #eeeeee;
+	font-size: 16px;
 }
 .upper_header .social_links a:hover {
 	background-color: #ffdfc8;
-}
-.social_links a.fb {
-	background-position: 7px 3px;
-}
-.social_links a.ok {
-	background-position: -26px 3px;
-}
-.social_links a.twit {
-	background-position: -57px 4px;
-}
-.social_links a.goo {
-	background-position: -88px 4px;
 }
 .drop_menu_block {
 	list-style: none;
