@@ -434,25 +434,23 @@ main > .container > .row {
 .catalog_drop .tutorials:before {
 	background-position: 0 0;
 }
-.catalog_drop > a:after {
-	content: "‣";
-	display: inline-block;
+.catalog_drop > a i.arr {
 	width: 30px;
 	height: 30px;
+	line-height: 30px;
+	text-align: center;
 	position: absolute;
 	right: 0;
 	top: 0;
-	font-size: 25px;
-	line-height: 30px;
-	text-align: center;
-	transform: rotate(90deg);
-	transition: all 0.3s ease;
+}
+.catalog_drop > a i.arr:hover {
+	background-color: #eeeeee;
 }
 .catalog_drop .mats:before {
 	background-position: -18px 0;
 }
-.catalog_drop a.open:after{
-	transform: rotate(0);
+.catalog_drop i.open{
+	transform: rotate(-90deg);
 }
 .aside_news {
 	width: 100%;

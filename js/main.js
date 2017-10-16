@@ -64,13 +64,6 @@ $(function(){
 });
 
 
-
-
-
-
-
-
-
 //Выпадение мобильного меню
 $(function(){
 	var link = $('#mobile_hamb');
@@ -85,7 +78,7 @@ $(function(){
 // на ссылках каталога
 $(function(){
 	var menu = $('.catalog_drop');
-	var link = menu.children('a');
+	var link = menu.children('a').children('i');
 
 	link.click(function(){
 		link.not($(this)).removeClass('open');
@@ -112,8 +105,6 @@ $(function() {
 				buttons.animate({'bottom' : height/2 + 36, 'transform' : 'translatey(50%)'}, 300);
 			}, 500);
 		});
-
-
 	})
 	$(window).resize(function(){
 		var buttons = $('.owl-prev, .owl-next' );
@@ -124,7 +115,6 @@ $(function() {
 			});
 	});
 });
-
 
 
 // Смещение шапки в момент скрола
@@ -163,11 +153,6 @@ if($(document).width() > 992) {
 		container.css({'min-height' : height });
 	});
 }
-
-
-
-
-
 
 
 // Счетчик количества товаров
@@ -213,6 +198,7 @@ if( $("div").is("#range_block") ) {
 
 		$( "#slider-range" ).slider({
 		range: true,
+		orientation: rangeOrientation(),
 		min: min,
 		max: max,
 		step : 10,
@@ -239,7 +225,7 @@ if( $("div").is("#range_block") ) {
 				values: [ min, max ]
 			});
 		})
-
+		//"vertical" "horizontal"
 
 		$('.reset_range').click(function(){
 			min = 0;
@@ -253,7 +239,19 @@ if( $("div").is("#range_block") ) {
 	});
 }
 
-
+/* Поворот диапазона цен */
+function rangeOrientation () {
+	return "horizontal";
+	/*$('#slider-range').css('height', '250px');
+	
+	if ($(document).width() > 500) {
+		return "horizontal";
+	}
+	else {
+		return "vertical";
+	}*/
+	
+}
 
 /*   Выпадающее меню   */
 

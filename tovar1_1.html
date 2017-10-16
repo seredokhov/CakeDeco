@@ -197,29 +197,31 @@
 		<div class="container">
 			<div class="row">
 				<aside class="col-lg-3 col-md-4">
-					<div class="catalog" id="accordion" aria-multiselectable="true">
-						<div class="header"><i class="fa fa-bars" aria-hidden="true"></i>Каталог</div>
-						<div class="catalog_drop panel">
-							<a class="tutorials open" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-								<span>Учебные материалы</span>
-							</a>
-							<ul id="collapseOne" class="list collapse in">
-								<li><a href="#">Журнал ТортДеко</a></li>
-								<li><a href="#">Книги</a></li>
-								<li><a href="#">Электронные пособия</a></li>
-							</ul>
-						</div>
-						<div class="catalog_drop panel">
-							<a class="mats" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-								<span>Антипригарные коврики</span>
-							</a>
-							<ul id="collapseTwo" class="list collapse">
-								<li><a href="#">Товар</a></li>
-								<li><a href="#">Товар</a></li>
-								<li><a href="#">Товар</a></li>
-							</ul>
-						</div>
-					</div>
+<div class="catalog" id="accordion" aria-multiselectable="true">
+	<div class="header"><i class="fa fa-bars" aria-hidden="true"></i>Каталог</div>
+	<div class="catalog_drop panel">
+		<a class="tutorials" href="#">
+			<span>Учебные материалы</span>
+			<i class="arr fa fa-caret-down open" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"></i>
+		</a>
+		<ul id="collapseOne" class="list collapse in">
+			<li><a href="#">Журнал ТортДеко</a></li>
+			<li><a href="#">Книги</a></li>
+			<li><a href="#">Электронные пособия</a></li>
+		</ul>
+	</div>
+	<div class="catalog_drop panel">
+		<a class="mats" href="#">
+			<span>Антипригарные коврики</span>
+			<i class="arr fa fa-caret-down" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"></i>
+		</a>
+		<ul id="collapseTwo" class="list collapse">
+			<li><a href="#">Товар</a></li>
+			<li><a href="#">Товар</a></li>
+			<li><a href="#">Товар</a></li>
+		</ul>
+	</div>
+</div>
 				</aside>
 				<section class="col-lg-9 col-md-8 main_block">
 					<div class="bg_container">
