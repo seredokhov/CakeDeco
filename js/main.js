@@ -78,7 +78,7 @@ $(function(){
 // на ссылках каталога
 $(function(){
 	var menu = $('.catalog_drop');
-	var link = menu.children('a').children('i');
+	var link = menu.children('div').children('a.arr');
 
 	link.click(function(){
 		link.not($(this)).removeClass('open');

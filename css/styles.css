@@ -392,16 +392,18 @@ main > .container > .row {
 	border-top: 1px solid #dddddd;
 	cursor: pointer;
 }
-.catalog_drop > a,
+.catalog_drop > div,
 .catalog_drop .list > li > a {
 	color: #747474;
 	display: block;
-	height: 30px;
 	font-size: 13px;
-	padding-left: 38px;
-	padding-top: 6px;
 	position: relative;
 	text-decoration: none;
+}
+.catalog_drop .list > li > a {
+	padding-left: 38px;
+	padding-top: 6px;
+	min-height: 30px;
 }
 /*
 .catalog_drop > span > a {
@@ -421,7 +423,21 @@ main > .container > .row {
 .catalog_drop .list > li > a:before {
 	content: "• ";
 }
-.catalog_drop > a:before {
+.catalog_drop .tutorials:before {
+	background-position: 0 0;
+}
+.catalog_drop > div {
+	position: relative;
+}
+.catalog_drop > div a.link {
+	display: block;
+	min-height: 30px;
+	padding-left: 38px;
+	padding-top: 6px;
+	color: #747474;
+	text-decoration: none;
+}
+.catalog_drop > div a.link:before {
 	content: "";
 	display: inline-block;
 	width: 19px;
@@ -431,10 +447,7 @@ main > .container > .row {
 	top: 7px;
 	background: url('../images/icons.png') no-repeat;
 }
-.catalog_drop .tutorials:before {
-	background-position: 0 0;
-}
-.catalog_drop > a i.arr {
+.catalog_drop > div a.arr {
 	width: 30px;
 	height: 30px;
 	line-height: 30px;
@@ -442,14 +455,16 @@ main > .container > .row {
 	position: absolute;
 	right: 0;
 	top: 0;
+	text-decoration: none;
+	color: #747474;
 }
-.catalog_drop > a i.arr:hover {
+.catalog_drop > div a.arr:hover {
 	background-color: #eeeeee;
 }
-.catalog_drop .mats:before {
+.catalog_drop .mats a.link:before {
 	background-position: -18px 0;
 }
-.catalog_drop i.open{
+.catalog_drop > div a.arr.open {
 	transform: rotate(-90deg);
 }
 .aside_news {
