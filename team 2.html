@@ -94,11 +94,11 @@
 				</ul>
 				<div class="col-md-4 col-xs-6 clearfix">
 					<div class="login_panel visible-lg">
-						<a href="#" class="enter">
+						<a href="#" class="enter" data-toggle="modal" data-target=".enter-modal">
 							<i class="fa fa-home" aria-hidden="true"></i>
 							<span>Войти</span>
 						</a>
-						<a href="#" class="reg">
+						<a href="#" class="reg" data-toggle="modal" data-target=".reg-modal">
 							<i class="fa fa-user" aria-hidden="true"></i>
 							<span>Регистрация</span>
 						</a>
@@ -163,9 +163,9 @@
 						<a href="#">Форум</a>
 					</li>
 					<li>
-						<a href="#"><span class="fa fa-home"></span>Войти</a></li>
+						<a href="#" data-toggle="modal" data-target=".enter-modal"><span class="fa fa-home"></span>Войти</a></li>
 					<li>
-						<a href="#"><span class="fa fa-user"></span>Регистрация</a>
+						<a href="#" data-toggle="modal" data-target=".reg-modal"><span class="fa fa-user"></span>Регистрация</a>
 					</li>
 					<li class="search">
 						<form action="/">
@@ -376,6 +376,94 @@
 			</div>
 		</div>
 	</footer>
+	<!--  Модальное окно вход  -->
+	<div class="modal fade enter-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<form class="modal-content">
+				<h1>Авторизация</h1>
+				<div class="login">
+					<label for="enter-login">Логин</label>
+					<input type="text" class="form-control" id="enter-login" placeholder="Введите логин">
+				</div>
+				<div class="password">
+					<label for="enter-password">Пароль</label>
+					<input type="text" class="form-control" id="enter-password" placeholder="Введите пароль">
+				</div>
+				<div class="remember">
+					<label for="enter-remember">Запомнить меня</label>
+					<input type="checkbox" id="enter-remember">
+				</div>
+				<input type="submit" class="enter-btn" value="Войти" name="Login">
+				<div class="links">
+					<a href="#">Регистрация</a>
+					<a href="#">Забыли свой пароль?</a>
+				</div>
+				<div class="enter-links">
+					<div>Войти как пользователь:</div>
+					<ul>
+						<li> <a class="livejournal" href="#"></a> </li>
+						<li> <a class="mail" href="#"></a> </li>
+						<li> <a class="liveinternet" href="#"></a> </li>
+						<li> <a class="blogger" href="#"></a> </li>
+						<li> <a class="openid" href="#"></a> </li>
+					</ul>
+				</div>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</form>
+		</div>
+	</div>
+	<!--  Модальное окно регистрация  -->
+	<div class="modal fade reg-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<form class="form-horizontal modal-content">
+				<h1>Регистрация</h1>
+				<div class="form-group">
+					<label for="reg-login" class="col-sm-5 control-label">Логин (мин. 3 символа)*:</label>
+					<div class="col-sm-7">
+						<input type="text" class="form-control" id="reg-login" placeholder="Придумайте логин...">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="reg-password" class="col-sm-5 control-label">Пароль*:</label>
+					<div class="col-sm-7">
+						<input type="password" class="form-control" id="reg-password" placeholder="Придумайте пароль...">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="reg-password2" class="col-sm-5 control-label">Подтверждение пароля*:</label>
+					<div class="col-sm-7">
+						<input type="password" class="form-control" id="reg-password2" placeholder="Подтвердите пароль...">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="reg-email" class="col-sm-5 control-label">Адрес email*:</label>
+					<div class="col-sm-7">
+						<input type="email" class="form-control" id="reg-email" placeholder="Введите свой email...">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="captcha" class="col-sm-5 control-label">Защита от автоматической регистрации:</label>
+					<div class="col-sm-7">
+						<img id="captcha" src="images/captcha.jpg" alt="captcha" width="180" height="40">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="captcha-confirm " class="col-sm-5 control-label">Введите слово на картинке*:</label>
+					<div class="col-sm-7">
+						<input type="text" class="form-control" id="captcha-confirm">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-7 col-sm-offset-5">
+						<input type="submit" class="reg-btn" value="Войти" name="Login">
+					</div>
+				</div>
+				<div class="reg-alert">Пароль должен быть не менее 6 символов длиной.</div>
+				<div class="reg-alert">* поля, обязательные для заполнения</div>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</form>
+		</div>
+	</div>
 	<!-- Bootstrap и другие JavaScript
 	================================================== -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

@@ -2198,6 +2198,115 @@ footer p {
 }
 
 /*============================================ 
+	Модальные окна авторизации/регистрации
+============================================*/
+
+/*авторизация*/
+
+.modal-content button.close {
+	position: absolute;
+	top: 5px;
+	right: 8px;
+}
+.enter-modal .modal-content {
+	padding: 20px;
+}
+.enter-modal label {
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	color: #333333;
+	font-weight: normal;
+	margin: 10px 0;
+}
+.enter-modal .remember {
+	text-align: center;
+}
+.enter-modal .remember label {
+	margin-bottom: 0;
+}
+.enter-modal .enter-btn,
+.reg-modal .reg-btn {
+	width: 170px;
+	padding: 10px 20px;
+	display: block;
+	margin: 5px auto 30px;
+	background: #ffaa83;
+	border-radius: 4px;
+	border: 1px solid #ee8d60;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.enter-modal .enter-btn:hover,
+.reg-modal .reg-btn:hover {
+	color: #eeeeee;
+	background-color: #ee8d60;
+}
+.enter-modal .links a {
+	display: block;
+	text-align: center;
+}
+.enter-modal .enter-links {
+	text-align: center;
+}
+.enter-modal .enter-links > div {
+	margin: 8px 0 4px;
+}
+.enter-modal .enter-links ul {
+	padding: 0;
+}
+.enter-modal .enter-links ul li {
+	display: inline-block;
+}
+.enter-modal .enter-links ul li a {
+	display: block;
+	width: 35px;
+	height: 35px;
+	background-image: url(../images/sprite.png);
+}
+.enter-modal a.livejournal {
+	background-position: -352px 0;
+}
+.enter-modal a.mail {
+	background-position: -440px 0;
+}
+.enter-modal a.liveinternet {
+	background-position: -528px 0;
+}
+.enter-modal a.openid {
+	background-position: -176px 0;
+}
+
+/*регистрация*/
+
+.reg-modal .modal-content {
+	padding: 20px;
+}
+.reg-modal h1,
+.enter-modal h1 {
+	margin-top: 0;
+}
+.form-horizontal .control-label {
+	text-align: left;
+	font-weight: normal;
+	color: #333333;
+	font-size: 14px;
+}
+input#captcha-confirm {
+	width: 180px;
+}
+.reg-modal .reg-btn {
+	margin: 0;
+}
+.reg-alert {
+	font-family: 'Proxima Nova Light';
+	color: #979797;
+	margin-bottom: 30px;
+}
+/*============================================ 
 	Медиа запросы
 ============================================*/
 
