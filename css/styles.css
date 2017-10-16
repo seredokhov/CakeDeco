@@ -1685,7 +1685,7 @@ div#range_block .input_group input {
 	transition: all 0.2s;
 }
 .select_block .dropdown li:hover {
-	background: #dddddd;
+	background: #ffdfc8;
 }
 .select_block .pane {
 	position: relative;
