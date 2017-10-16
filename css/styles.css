@@ -50,9 +50,13 @@
 ============================================*/
 html {
 	min-width: 300px;
+	overflow-y: scroll;
+	overflow-x: auto;
 }
+
 body{
 	font-family: 'Proxima Nova Regular', sans-serif;
+	padding-right: 0 !important;
 }
 ul {
 	margin: 0;

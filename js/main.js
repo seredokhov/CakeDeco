@@ -73,6 +73,18 @@ $(function(){
 	})
 });
 
+//Переход на другое модальное окно по ссылке
+
+$(function(){
+	var link = $('#reg-modal-toggle');
+	link.click(function(){
+		$('.enter-modal').modal('hide');
+		setTimeout (function(){
+			$('.reg-modal').modal('show');
+		},300)
+	})
+})
+
 
 // Изменение положения треугольника 
 // на ссылках каталога
