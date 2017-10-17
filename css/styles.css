@@ -2517,8 +2517,8 @@ input#captcha-confirm {
 	}
 	.item-1,
 	.item-4 {
-		width: 100%;
 		max-width: 100%;
+		width: 100%;
 		text-align: center;
 		float: none;
 	}
