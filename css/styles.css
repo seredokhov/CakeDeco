@@ -1643,10 +1643,11 @@ div#range_block .input_group input {
 .filters_block .select_block {
 	width: 70%;
 	text-align: justify;
+	text-align-last: justify;
 	min-height: 150px;
-	display: flex;
+	/*display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-between;*/
 }
 .select_block > .select {
 	display: inline-block;
@@ -2516,8 +2517,8 @@ input#captcha-confirm {
 	}
 	.item-1,
 	.item-4 {
-		width: auto;
-		max-width: 225px;
+		width: 100%;
+		max-width: 100%;
 		text-align: center;
 		float: none;
 	}
