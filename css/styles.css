@@ -52,6 +52,10 @@ html {
 	min-width: 300px;
 	overflow-y: scroll;
 	overflow-x: auto;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */ 
 }
 
 body{
@@ -101,6 +105,15 @@ hr {
 }
 a {
 	outline: none !important;
+}
+div#wrapper {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(0,0,0, .5);
+	z-index: 2;
 }
 /*============================================ 
 	Стили Шапки
@@ -1548,7 +1561,6 @@ a.load_link:hover {
 /*  Блок фильтров  */
 
 .filters_block {
-	margin-bottom: 30px;
 	position: relative;
 }
 .filters_block > div {
@@ -1640,6 +1652,29 @@ div#range_block .input_group input {
 }
 
 /*   Выпадающие списки   */
+div#slide_selects {
+	display: none;
+	float: none;
+}
+div#slide_selects > button {
+	display: block;
+	width: 100%;
+	text-align: center;
+	background: #ffaa83;
+	color: #ffffff;
+	border-radius: 4px;
+	border: 1px solid #ee8d60;
+	height: 43px;
+	line-height: 43px;
+	font-size: 16px;
+	margin: 10px 0;
+}
+div#slide_selects > button:active {
+	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	background: #ee8d60;
+	color: #eeeeee;
+}
 .filters_block .select_block {
 	width: 70%;
 	text-align: justify;
@@ -1678,9 +1713,6 @@ div#range_block .input_group input {
 	border: 1px solid #dddddd;
 	border-top: none;
 	z-index: 999;
-}
-.select_block .dropdown.open {
-	display: block;
 }
 .select_block .dropdown li {
 	font-size: 12px;
@@ -1781,17 +1813,68 @@ select {
 	font-size: 14px;
 }
 
-/*   Кнопки управления ресайзом   */
-.filters_block .resize_controls {
-	position: absolute;
-	right: 1px;
-	bottom: -25px;
+/*   Кнопки управления ресайзом  + сортировка  */
+.resize_controls {
+	text-align: right;
 	font-size: 20px;
 	color: #8f8f8f;
+	margin-bottom: 10px;
+}
+.resize_controls > div {
 	cursor: pointer;
 }
-.filters_block .resize_controls .active {
+.resize_controls #table,
+.resize_controls #row {
+	font-size: 20px;
+	position: relative;
+	top: 2px;
+}
+.resize_controls .active {
 	color: #fe5f71;
+}
+
+
+
+div#sort {
+	display: inline-block;
+	font-size: 15px;
+	border: 1px solid #dddddd;
+	color: #747474;
+	text-align: left;
+	position: relative;
+	min-width: 167px;
+}
+div#sort > .sort-ul {
+	padding: 0;
+	list-style: none;
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	background: #ffffff;
+	border: 1px solid #dddddd;
+}
+div#sort > .sort-ul li {
+	font-size: 15px;
+	color: #747474;
+	padding: 5px 20px 5px 10px;
+}
+div#sort > .sort-ul li:hover {
+	background: #ffdfc8;
+}
+div#sort .sort-changed {
+	padding: 5px 20px 5px 10px;
+}
+div#sort span.fa:before {
+	margin-right: 5px;
+}
+div#sort i.fa {
+	position: absolute;
+	top: 7px;
+	right: 5px;
+	font-size: 16px;
 }
 .news_block {
 	overflow: hidden;
@@ -2122,8 +2205,8 @@ select {
 
 footer {
 	background: #ffdfc8;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 footer h3 {
 	margin-bottom: 20px;
@@ -2419,6 +2502,9 @@ input#captcha-confirm {
 	.header_phone {
 		margin-right: 0;
 	}
+	.resize_controls > .fa {
+		display: none;
+	}
 }
 @media (max-width: 768px) {
 	.first_person p {
@@ -2500,6 +2586,23 @@ input#captcha-confirm {
 	div#range_block .cost_inputs .input_group {
 		text-align: center !important;
 	}
+	div#sort > .sort-ul {
+		position: fixed;
+		top: 50%;
+		width: 80%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	div#slide_selects{
+		display: block;
+	}
+	.filters_block > div {
+		float: none;
+	}
+	.filters_block .select_block {
+		display: none;
+		overflow: hidden;
+	}
 }
 
 @media (max-width: 500px) {
@@ -2577,11 +2680,6 @@ input#captcha-confirm {
 	.upper_header > .row > div.clearfix {
 		padding-left: 4px;
 		float: right;
-	}
-}
-@media (min-width: 551px) {
-	.select_block > .select:hover .dropdown {
-		display: block;
 	}
 }
 

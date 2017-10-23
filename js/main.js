@@ -265,31 +265,40 @@ function rangeOrientation () {
 	
 }
 
-/*   Выпадающее меню   */
 
+// Блок фильров
+
+//Кнопка "дополнительные фильтры""
+$(function(){
+	if( $('div').is('#slide_selects') ) {
+		var button = $('#slide_selects').find('button');
+		button.click(function(){
+			$(this).parent().siblings('.select_block').slideToggle();
+		})
+	}
+});
+
+//Выпадение фильтров
 $(function() {
 	var select = $('.select_block').find('.select');
 	var pane = select.find('.pane');
 	var li = select.find('.dropdown').find('li');
-	if ($(document).width() < 535) {
-		pane.click(function(){
-			$(this).parent().find('.dropdown').toggleClass('open');
-		})
-	}
+	pane.click(function(){
+			pane.not(this).parent().find('.dropdown').slideUp(200);
+			$(this).parent().find('.dropdown').slideToggle(200);
+	})
+
 	li.click(function(){
 		var content = $(this).text();
 		$(this).parent().parent().find('.pane').find('span').text(content);
-		if ($(document).width() < 535) {
-			$(this).parent().toggleClass('open');
-		}
+		$(this).parent().slideToggle(200);
 	})
 });
 
 
 
 
-// Изменение размеров блоков
-
+// Изменение размеров блоков item
 if ($(document).width() > 1200) {
 	if( $("div").is('.resize_controls') ) {
 		$(function() {
@@ -380,3 +389,62 @@ $(function() {
 
 	});
 });
+
+
+// Сортировка
+
+$(function(){
+	if( $("div").is('.resize_controls') ) {
+		var sort = $('#sort');
+		var sortChanged = sort.find('.sort-changed');
+		var sortList = sort.find('.sort-ul');
+		var li = sortList.find('li');
+		var i = sort.find('i');
+
+		sortChanged.click(function(){
+			$(this).siblings('ul').slideToggle(200);
+			if ($(document).width() < 550) {
+				wrapper(); // Функция добавляет или удаляет затемнение (см ниже)
+			}
+			if ( $("div").is('#wrapper') ) {
+				$("#wrapper").click(function(){
+					sortList.hide(50);
+					$(this).remove();
+				})
+			}
+
+			i.toggleClass('fa-angle-down fa-angle-up');
+		})
+
+		li.click(function(){
+			var txt = $(this).html();
+			$(this).parent().siblings('.sort-changed').html(txt);
+			sortList.slideToggle(200);
+			/*
+			if ($(document).width() >= 550) {
+				sortList.slideToggle(200);
+			}
+			else {
+				sortList.hide(50);
+			}*/
+			i.toggleClass('fa-angle-down fa-angle-up');
+			if ($(document).width() < 551) {
+				wrapper();
+			}
+			
+		})
+
+
+	}
+});
+
+// Функция затемнения
+function wrapper() {
+	if ( $("div").is('#wrapper') ) {
+		$('body').find('#wrapper').remove();
+	}
+	else {
+		$('body').append('<div id="wrapper">');
+	}
+}
+
