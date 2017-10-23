@@ -1015,6 +1015,24 @@ main > .container > .row {
 .bread_crumbs + h1 {
 	margin-top: 15px;
 }
+ul.nav-about {
+	list-style: none;
+	width: 100%;
+	padding: 0;
+	background: #ffffff;
+	border: 1px solid #dddddd;
+}
+ul.nav-about a {
+	display: block;
+	text-decoration: none;
+	color: #555555;
+	padding: 5px 15px;
+	font-size: 15px;
+	border-top: 1px solid #dddddd;
+}
+ul.nav-about li:first-child a {
+	border-top: none;
+}
 .about p {
 	color: #828282;
 	font-size: 12px;
