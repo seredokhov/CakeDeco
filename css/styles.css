@@ -1021,6 +1021,7 @@ ul.nav-about {
 	padding: 0;
 	background: #ffffff;
 	border: 1px solid #dddddd;
+	margin-bottom: 15px;
 }
 ul.nav-about a {
 	display: block;
