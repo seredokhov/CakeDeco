@@ -113,7 +113,7 @@ div#wrapper {
 	left: 0;
 	bottom: 0;
 	background: rgba(0,0,0, .5);
-	z-index: 2;
+	z-index: 10;
 }
 /*============================================ 
 	Стили Шапки
@@ -285,7 +285,7 @@ div#wrapper {
 .hamb_button a {
 	width: 43px;
 	position: relative;
-	z-index: 999;
+	z-index: 4;
 }
 .basket_button a > i {
 	margin-right: 9px;
@@ -352,7 +352,7 @@ li.search form {
 	right: 0;
 	top: 0;
 	background: #ffdfc8;
-	z-index: 200;
+	z-index: 3;
 	transition: all 0.3s linear;
 }
 #mobile_menu.open {

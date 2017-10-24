@@ -421,13 +421,6 @@ $(function(){
 			var txt = $(this).html();
 			$(this).parent().siblings('.sort-changed').html(txt);
 			sortList.slideToggle(200);
-			/*
-			if ($(document).width() >= 550) {
-				sortList.slideToggle(200);
-			}
-			else {
-				sortList.hide(50);
-			}*/
 			i.toggleClass('fa-angle-down fa-angle-up');
 			if ($(document).width() < 551) {
 				wrapper();
