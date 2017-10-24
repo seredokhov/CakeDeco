@@ -303,6 +303,8 @@ div#wrapper {
 }
 .search form {
 	position: relative;
+}
+li.search form {
 	width: 250px;
 }
 .search form > input {
