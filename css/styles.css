@@ -226,6 +226,7 @@ div#wrapper {
 .lower_header {
 	background: #ffdfc8;
 	min-height: 64px;
+	position: relative;
 }
 .logo {
 	float: left;
@@ -283,6 +284,8 @@ div#wrapper {
 }
 .hamb_button a {
 	width: 43px;
+	position: relative;
+	z-index: 999;
 }
 .basket_button a > i {
 	margin-right: 9px;
@@ -300,6 +303,7 @@ div#wrapper {
 }
 .search form {
 	position: relative;
+	width: 250px;
 }
 .search form > input {
 	min-width: 230px;
@@ -325,6 +329,7 @@ div#wrapper {
 .search form > button:active {
 	background: #ee8d60;
 }
+/*
 #mobile_menu {
 	overflow: hidden;
 	width: 100%;
@@ -332,18 +337,37 @@ div#wrapper {
 	padding: 0;
 	height: 0;
 	transition: all 0.5s ease;
-
+	border-top: 2px solid #fe5f71;
+}
+*/
+#mobile_menu {
+	overflow: hidden;
+	list-style: none;
+	padding: 10px 0;
+	height: auto;
+	width: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: #ffdfc8;
+	z-index: 200;
+	transition: all 0.3s linear;
+}
+#mobile_menu.open {
+	width: 270px;
+	-webkit-box-shadow: 0px 3px 9px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 3px 9px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 3px 9px 0px rgba(0,0,0,0.3);
 }
 #mobile_menu > li {
 	font-size: 16px;
 	font-family: 'Proxima Nova Bold';
-}
-#mobile_menu > li:first-child {
-	border-top: 2px solid #fe5f71;
+	white-space: nowrap;
+	padding: 0 10px;
 }
 #mobile_menu > li.search {
 	float: none;
-	padding-right: 0;
+	
 }
 #mobile_menu a {
 	color: #a4a4a4;
@@ -358,9 +382,6 @@ div#wrapper {
 #mobile_menu a:hover,
 #mobile_menu a:active {
 	color: #fe5f71;
-}
-#mobile_menu.open {
-	height: 325px;
 }
 .fix {
 	position: fixed;

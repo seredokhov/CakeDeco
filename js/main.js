@@ -70,6 +70,7 @@ $(function(){
 	var menu = $('#mobile_menu');
 	link.click(function(){
 		menu.toggleClass('open');
+		$(this).find('i').toggleClass('fa-bars fa-close');
 	})
 });
 
