@@ -297,6 +297,15 @@ $(function() {
 });
 
 
+// Каталог
+$(function() {
+	var link = $('.catalog .header');
+	
+	link.click(function(){
+		$(this).siblings().slideToggle(100);
+	})
+});
+
 
 
 // Изменение размеров блоков item
@@ -346,7 +355,7 @@ $(function() {
 	var images = [];
 	var i = 0
 	smallImg.each(function(){
-	    images.push($(this));
+		images.push($(this));
 	})
 	
 	largeNext.click(function(){
